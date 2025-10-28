@@ -1,0 +1,205 @@
+:root {
+    --brand-main: #09aff4;
+}
+
+.bg-main {
+    background-color: var(--brand-main);
+}
+
+.text-main {
+    color: var(--brand-main);
+}
+
+
+/*-----------------
+ section navabar
+-------------------*/
+
+.navbar-nav {
+    padding-left: 1.5rem;
+}
+
+#mainNav {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scrolled {
+    background-color: var(--brand-main) !important;
+}
+
+
+/*-----------------
+ section slider
+-------------------*/
+
+.main-swiper {
+    height: 100vh;
+}
+
+.swiper {
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.particles-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.swiper-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 17%;
+    transform: translateY(-50%);
+    max-width: 600px;
+    color: white;
+    z-index: 4;
+}
+
+.hero-section {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.hero-content .title span.highlight {
+    color: #00bfff;
+}
+
+.subtitle {
+    position: relative;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #00bfff;
+    text-shadow: 0 0 5px rgba(0, 191, 255, 0.7);
+}
+
+.subtitle::before,
+.subtitle::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 6px;
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
+    background-color: var(--clr-main, #00bfff);
+    top: 50%;
+    translate: 0 -50%;
+}
+
+.subtitle::before {
+    left: 0;
+}
+
+.subtitle::after {
+    right: 0;
+}
+
+.buttons .btn__slider {
+    border: 2px solid var(--brand-main, #09aff4);
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+    border-radius: 5px 20px 5px 20px;
+    margin-top: 1rem;
+}
+
+.buttons .btn__slider:first-child:hover {
+    background-color: transparent !important;
+    color: var(--brand-main) !important;
+}
+
+.buttons .btn__slider:last-child:hover {
+    background-color: var(--brand-main, #09aff4) !important;
+    color: #ffffff !important;
+}
+
+
+/*-----------------
+ section services
+-------------------*/
+
+.space {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+}
+
+.space .content .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.space .content p {
+    font-size: 20px;
+}
+
+.space .service__card {
+    border: var(--brand-main) 1px solid;
+    padding: 1rem;
+    margin-top: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.space .service__card .service__title {
+    font-weight: 700;
+}
+
+.space .service__card a {
+    text-decoration: none;
+    color: var(--brand-main) !important;
+}
+
+.space .service__card:hover {
+    background-color: var(--brand-main);
+    color: white;
+    border-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.space .service__card:hover .service__link span,
+.space .service__card:hover .service__icon i,
+.space .service__card:hover .service__title {
+    color: white;
+}
+
+.service__card::after {
+    width: 0%;
+    left: -100%;
+    transition: background-color 0.3s ease;
+}

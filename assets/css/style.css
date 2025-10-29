@@ -1,5 +1,6 @@
 :root {
     --brand-main: #09aff4;
+    /* --brand-start: rgba(0, 9, 34); */
 }
 
 .bg-main {
@@ -174,6 +175,7 @@
     border-radius: 8px;
     text-align: center;
     margin-bottom: 8px;
+    overflow: hidden;
 }
 
 .space .service__card .service__title {
@@ -186,20 +188,156 @@
 }
 
 .space .service__card:hover {
-    background-color: var(--brand-main);
     color: white;
     border-color: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.space .service__card:hover .service__link span,
-.space .service__card:hover .service__icon i,
-.space .service__card:hover .service__title {
-    color: white;
+.service__card:hover a,
+.service__card:hover i {
+    color: white !important;
 }
 
-.service__card::after {
-    width: 0%;
-    left: -100%;
-    transition: background-color 0.3s ease;
+.feature-card__animation {
+    height: 93%;
+    position: relative;
+    z-index: 1;
+    transition: all .3s linear 0s;
+}
+
+.feature-card__animation:before {
+    background: var(--brand-main);
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 0;
+    width: 0;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    transition: all .3s ease-in-out;
+    z-index: -1;
+}
+
+.feature-card__animation:hover:before {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+
+/*-----------------
+ section about
+-------------------*/
+
+.about__section .title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/*-----------------
+ section chouse
+-------------------*/
+
+.chouse__number {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 0.8;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.chouse__title {
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.chouse__text {
+    opacity: 0.75;
+}
+
+.chouse__section .title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/*-----------------
+ section start
+-------------------*/
+
+.overlay__start {
+    background-image: url('../img/pattern-bg-3.jpg');
+    opacity: 0.2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.start__section {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background-color: #060922;
+}
+
+.start__innner {
+    text-align: center;
+    position: relative;
+    padding: 1rem;
+    color: white;
+    border: 1px solid var(--brand-main);
+    border-top: 0.25rem solid var(--brand-main);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: rgba(rgba(0, 9, 34), 0.25);
+}
+
+.start__number {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.start__icon {
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--brand-main);
+    opacity: 0.65;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.start__text {
+    font-size: 1.25rem;
+    font-weight: 400;
+    display: block;
+    text-transform: capitalize;
+}
+
+
+/*-----------------
+ section portafolio
+-------------------*/
+
+.portafolio__section .title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.portafolio__section .portafolio__list {
+    font-size: 1.25rem;
+    margin-top: auto;
+    text-transform: capitalize;
+}
+
+.portafolio__section .portafolio__list .portafolio__btn:hover {
+    color: var(--brand-main);
+    cursor: pointer;
 }

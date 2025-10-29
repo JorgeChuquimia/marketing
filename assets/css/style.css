@@ -1,5 +1,6 @@
 :root {
     --brand-main: #09aff4;
+    /* --brand-main: #ff0666; */
     /* --brand-start: rgba(0, 9, 34); */
 }
 
@@ -319,25 +320,4 @@
     font-weight: 400;
     display: block;
     text-transform: capitalize;
-}
-
-
-/*-----------------
- section portafolio
--------------------*/
-
-.portafolio__section .title {
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.portafolio__section .portafolio__list {
-    font-size: 1.25rem;
-    margin-top: auto;
-    text-transform: capitalize;
-}
-
-.portafolio__section .portafolio__list .portafolio__btn:hover {
-    color: var(--brand-main);
-    cursor: pointer;
 }

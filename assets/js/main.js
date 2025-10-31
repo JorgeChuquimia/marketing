@@ -1,18 +1,24 @@
 //navbar
 document.addEventListener("DOMContentLoaded", function() {
-    const navbar = document.getElementById("mainNav");
+    const transparentNav = document.getElementById("transparentNav");
+    const scrolledNav = document.getElementById("scrolledNav");
     const scrollThreshold = 50;
 
-    if (navbar) {
-        const changeNavBg = () => {
+    if (transparentNav && scrolledNav) {
+        scrolledNav.classList.add("hidden");
+        const toggleNavbars = () => {
             if (window.scrollY >= scrollThreshold) {
-                navbar.classList.add("scrolled");
+                transparentNav.classList.add("hidden");
+                scrolledNav.classList.remove("hidden");
+                scrolledNav.classList.add("visible");
             } else {
-                navbar.classList.remove("scrolled");
+                transparentNav.classList.remove("hidden");
+                scrolledNav.classList.remove("visible");
+                scrolledNav.classList.add("hidden");
             }
         };
-        changeNavBg();
-        window.addEventListener("scroll", changeNavBg);
+        window.addEventListener("scroll", toggleNavbars);
+        toggleNavbars();
     }
 });
 //particles 

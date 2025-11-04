@@ -14,38 +14,27 @@
 
 
 /*-----------------
- section navabar
+ section navbar
 -------------------*/
 
 .navbar-nav {
     padding-left: 1.5rem;
 }
 
-
-/* Añade transición al navbar que aparece para un efecto suave */
-
 #scrolledNav {
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
-
-/* 1. CLASE PARA OCULTAR (Desplaza hacia arriba y lo hace invisible) */
 
 .hidden {
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
-    /* Evita que el navbar oculto bloquee los clics */
 }
-
-
-/* 2. CLASE PARA MOSTRAR (Vuelve a su posición normal) */
 
 .visible {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
-    /* Permite clics */
 }
 
 
@@ -346,6 +335,11 @@
     font-weight: 700;
 }
 
+.about__section .img__about img {
+    fill: var(--brand-main);
+    transition: fill 0.3s;
+}
+
 
 /*-----------------
  section chouse
@@ -430,6 +424,32 @@
     font-weight: 400;
     display: block;
     text-transform: capitalize;
+}
+
+
+/*-----------------
+ section blog
+-------------------*/
+
+.card {
+    border: var(--brand-main) 1px solid;
+    overflow: hidden;
+}
+
+.card .card-body:hover .card-title {
+    color: var(--brand-main) !important;
+    transition: color 0.2s ease;
+}
+
+.card .card-img-top {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
 }
 
 
